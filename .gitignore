@@ -1,3 +1,11 @@
 # Ignore secrets and config files
 # src/main/resources/application.properties
+
+
+target/
+*.jar
+*.tar.gz
+*.zip
+*.log
 *.env
+*.class
