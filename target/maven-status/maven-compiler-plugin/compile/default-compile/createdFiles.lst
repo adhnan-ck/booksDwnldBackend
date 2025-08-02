@@ -1,0 +1,5 @@
+com\adhnan\booksWebsite\repository\PdfRepository.class
+com\adhnan\booksWebsite\BooksWebsiteApplication.class
+com\adhnan\booksWebsite\model\PdfDocument.class
+com\adhnan\booksWebsite\config\WebConfig.class
+com\adhnan\booksWebsite\controller\PdfController.class
