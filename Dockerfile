@@ -1,9 +1,14 @@
-FROM openjdk:21-jdk-slim
+# Use a multi-stage build
 
+# Stage 1: Build the JAR
+FROM maven:3.9.6-eclipse-temurin-21 as builder
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-COPY target/*.jar app.jar
-
+# Stage 2: Use a smaller image to run the app
+FROM openjdk:21-jdk-slim
+WORKDIR /app
+COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 8080
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar"]
