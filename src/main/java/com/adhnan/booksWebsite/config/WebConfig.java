@@ -12,7 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                     "http://localhost:3000",           // React dev server (Vite default)
                     "http://localhost:8081",           // Vite dev server default port
-                    "https://your-app-name.netlify.app" // Your Netlify URL (update this)
+                    "https://basedbooks.netlify.app" // Your Netlify URL (update this)
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
